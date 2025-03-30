@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - GSDF</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+        .amount-btn { padding: 10px 20px; margin: 5px; cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 5px; }
+        .donate-btn { padding: 10px 20px; margin-top: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .impact { margin-top: 20px; font-size: 14px; color: #555; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Support Our Cause</h2>
+        <p>Your donation helps us make a difference!</p>
+        
+        <h3>Select Donation Amount</h3>
+        <button class="amount-btn" onclick="setAmount(500)">₹500</button>
+        <button class="amount-btn" onclick="setAmount(1000)">₹1000</button>
+        <input type="number" id="customAmount" placeholder="Enter Custom Amount">
+        
+        <h3>Choose Payment Method</h3>
+        <select id="paymentMethod">
+            <option value="upi">UPI</option>
+            <option value="bank">Bank Transfer</option>
+            <option value="paypal">PayPal</option>
+            <option value="razorpay">Razorpay</option>
+        </select>
+        
+        <h3>Donation Type</h3>
+        <label><input type="radio" name="donationType" value="one-time" checked> One-Time</label>
+        <label><input type="radio" name="donationType" value="monthly"> Monthly</label>
+        
+        <button class="donate-btn" onclick="donate()">Donate Now</button>
+        
+        <p class="impact">Your contribution helps us provide education, food, and shelter to those in need. Thank you for your generosity!</p>
+    </div>
+
+    <script>
+        function setAmount(amount) {
+            document.getElementById('customAmount').value = amount;
+        }
+        function donate() {
+            let amount = document.getElementById('customAmount').value;
+            let method = document.getElementById('paymentMethod').value;
+            let type = document.querySelector('input[name="donationType"]:checked').value;
+            alert(`Thank you for donating ₹${amount} via ${method} (${type} donation)!`);
+        }
+    </script>
+</body>
+</html>
