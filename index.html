@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govind Social Development Foundation</title>
+    <title>About Us - GSDF</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,50 +20,30 @@
         </nav>
     </header>
     
-    <section class="hero">
-        <div class="overlay"></div>
-        <h1>Transforming Lives, One Step at a Time</h1>
-        <p>Join us in making a difference for communities across India.</p>
-        <a href="donate.html" class="btn">Support Us</a>
+    <section class="about-hero">
+        <h1>About Govind Social Development Foundation</h1>
+        <p>Working towards a brighter future for communities across India.</p>
     </section>
     
-    <section class="impact">
-        <h2>Our Impact</h2>
-        <div class="impact-cards">
-            <div class="card">
-                <h3>5000+</h3>
-                <p>Children Educated</p>
-            </div>
-            <div class="card">
-                <h3>100+</h3>
-                <p>Healthcare Camps Organized</p>
-            </div>
-            <div class="card">
-                <h3>200+</h3>
-                <p>Women Empowered</p>
-            </div>
-        </div>
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>Govind Social Development Foundation is committed to empowering marginalized communities through education, healthcare, and sustainable development. Our initiatives focus on improving lives, creating opportunities, and building a better tomorrow.</p>
     </section>
     
-    <section class="programs">
-        <h2>Our Programs</h2>
-        <div class="program-list">
-            <div class="program">
-                <img src="education.jpg" alt="Education Program">
-                <h3>Education for All</h3>
-                <p>Providing quality education to underprivileged children.</p>
-            </div>
-            <div class="program">
-                <img src="healthcare.jpg" alt="Healthcare Initiative">
-                <h3>Healthcare Initiatives</h3>
-                <p>Ensuring medical aid reaches the most remote areas.</p>
-            </div>
-            <div class="program">
-                <img src="women_empowerment.jpg" alt="Women Empowerment">
-                <h3>Women Empowerment</h3>
-                <p>Creating self-sustaining opportunities for women.</p>
-            </div>
-        </div>
+    <section class="objectives">
+        <h2>Our Objectives</h2>
+        <ul>
+            <li>To provide education and vocational training for underprivileged children and youth.</li>
+            <li>To promote healthcare, sanitation, and medical aid in rural areas.</li>
+            <li>To support women's empowerment through self-help groups and training.</li>
+            <li>To implement environmental initiatives such as afforestation and water conservation.</li>
+            <li>To work towards community development with a focus on sustainability.</li>
+        </ul>
+    </section>
+    
+    <section class="history">
+        <h2>Our Story</h2>
+        <p>Founded with a vision to transform society, GSDF has been tirelessly working towards holistic development. Over the years, we have impacted thousands of lives by implementing projects in education, healthcare, and social welfare.</p>
     </section>
     
     <footer>
@@ -97,65 +73,70 @@
             list-style: none;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav ul li {
-            margin: 0 15px;
+            margin: 10px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 16px;
         }
-        .donate-btn {
-            background: #ff6600;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-        .hero {
-            background: url('https://i.imgur.com/2kMpHO9.jpeg') no-repeat center center/cover;
-            height: 60vh;
+        .about-hero {
+            background: url('https://i.imgur.com/2kMpHO9.jpeg') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            height: 50vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px;
+            text-align: center;
             color: white;
-            position: relative;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
-        .impact {
-            background: #f9f9f9;
-            padding: 50px;
+        .mission, .objectives, .history {
+            padding: 40px;
         }
-        .impact-cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .objectives ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .card {
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        .programs {
-            padding: 50px;
+        .objectives ul li {
             background: #eef7f1;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
         }
-        .program-list {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .program {
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            text-align: left;
-            width: 300px;
-        }
-        .program img {
-            width: 100%;
-            border-radius: 8px 8px 0 0;
+        @media (max-width: 768px) {
+            .about-hero {
+                height: 40vh;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 16px;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                text-align: center;
+                width: 100%;
+            }
         }
     </style>
 </body>
