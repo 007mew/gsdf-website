@@ -9,10 +9,12 @@
 <body>
     <header>
         <nav>
+            <div class="logo">GSDF</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="donate.html">Donate</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -20,14 +22,48 @@
     
     <section class="hero">
         <div class="overlay"></div>
-        <h1>Welcome to Govind Social Development Foundation</h1>
-        <p>Empowering communities, changing lives.</p>
-        <a href="donate.html" class="btn">Donate Now</a>
+        <h1>Transforming Lives, One Step at a Time</h1>
+        <p>Join us in making a difference for communities across India.</p>
+        <a href="donate.html" class="btn">Support Us</a>
     </section>
     
-    <section class="content">
-        <h2>Our Mission</h2>
-        <p>We are dedicated to improving lives through education, healthcare, and community development.</p>
+    <section class="impact">
+        <h2>Our Impact</h2>
+        <div class="impact-cards">
+            <div class="card">
+                <h3>5000+</h3>
+                <p>Children Educated</p>
+            </div>
+            <div class="card">
+                <h3>100+</h3>
+                <p>Healthcare Camps Organized</p>
+            </div>
+            <div class="card">
+                <h3>200+</h3>
+                <p>Women Empowered</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="programs">
+        <h2>Our Programs</h2>
+        <div class="program-list">
+            <div class="program">
+                <img src="education.jpg" alt="Education Program">
+                <h3>Education for All</h3>
+                <p>Providing quality education to underprivileged children.</p>
+            </div>
+            <div class="program">
+                <img src="healthcare.jpg" alt="Healthcare Initiative">
+                <h3>Healthcare Initiatives</h3>
+                <p>Ensuring medical aid reaches the most remote areas.</p>
+            </div>
+            <div class="program">
+                <img src="women_empowerment.jpg" alt="Women Empowerment">
+                <h3>Women Empowerment</h3>
+                <p>Creating self-sustaining opportunities for women.</p>
+            </div>
+        </div>
     </section>
     
     <footer>
@@ -42,20 +78,34 @@
             text-align: center;
         }
         header {
-            background: #333;
+            background: linear-gradient(90deg, #007b5e, #004d40);
             padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
         }
         nav ul li {
-            display: inline;
             margin: 0 15px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-size: 16px;
+        }
+        .donate-btn {
+            background: #ff6600;
+            padding: 8px 15px;
+            border-radius: 5px;
         }
         .hero {
             background: url('https://i.imgur.com/2kMpHO9.jpeg') no-repeat center center/cover;
@@ -67,64 +117,42 @@
             color: white;
             position: relative;
         }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .content {
+        .impact {
+            background: #f9f9f9;
             padding: 50px;
-            background: white;
         }
-        .btn {
-            background: #ff6600;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+        .impact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .programs {
+            padding: 50px;
+            background: #eef7f1;
+        }
+        .program-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .program {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: left;
+            width: 300px;
+        }
+        .program img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
         }
     </style>
-</body>
-</html>
-
-<!-- About Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>About Us</title>
-</head>
-<body>
-    <h1>About Govind Social Development Foundation</h1>
-    <p>We are committed to social welfare, education, and healthcare initiatives across India.</p>
-</body>
-</html>
-
-<!-- Donate Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Donate</title>
-</head>
-<body>
-    <h1>Support Our Cause</h1>
-    <p>Your donations help us make a difference.</p>
-    <button>Donate Now</button>
-</body>
-</html>
-
-<!-- Contact Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Contact Us</title>
-</head>
-<body>
-    <h1>Contact Govind Social Development Foundation</h1>
-    <p>Email: contact@gsdfngo.in</p>
-    <p>Phone: +91-XXXXXXXXXX</p>
 </body>
 </html>
