@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate - GSDF</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
-        .amount-btn { padding: 10px 20px; margin: 5px; cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 5px; }
-        .donate-btn { padding: 10px 20px; margin-top: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        .impact { margin-top: 20px; font-size: 14px; color: #555; }
+        body { font-family: 'Poppins', sans-serif; text-align: center; padding: 20px; background: linear-gradient(to right, #ff7e5f, #feb47b); color: white; }
+        .container { max-width: 800px; margin: auto; padding: 30px; background: rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+        h2 { font-size: 2.5em; }
+        .amount-btn { padding: 15px 30px; margin: 10px; cursor: pointer; background: #ff5733; color: white; border: none; border-radius: 10px; font-size: 1.2em; transition: 0.3s; }
+        .amount-btn:hover { background: #c70039; }
+        .donate-btn { padding: 15px 40px; margin-top: 20px; background: #2ecc71; color: white; border: none; border-radius: 10px; font-size: 1.5em; cursor: pointer; transition: 0.3s; }
+        .donate-btn:hover { background: #27ae60; }
+        .impact { margin-top: 20px; font-size: 1.2em; color: #f8f9fa; }
+        input, select { padding: 10px; font-size: 1.1em; margin: 10px; border-radius: 5px; border: none; }
+        .testimonial { margin-top: 30px; font-style: italic; font-size: 1.2em; }
+        .hero { font-size: 1.8em; font-weight: bold; margin-bottom: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="hero">Make a Difference Today!</div>
         <h2>Support Our Cause</h2>
-        <p>Your donation helps us make a difference!</p>
+        <p>Your donation helps us change lives every day.</p>
         
         <h3>Select Donation Amount</h3>
         <button class="amount-btn" onclick="setAmount(500)">₹500</button>
@@ -36,7 +43,9 @@
         
         <button class="donate-btn" onclick="donate()">Donate Now</button>
         
-        <p class="impact">Your contribution helps us provide education, food, and shelter to those in need. Thank you for your generosity!</p>
+        <p class="impact">Your contribution provides education, food, and shelter to those in need. Thank you for your generosity!</p>
+        
+        <div class="testimonial">“Every rupee donated goes towards making a real impact. Thank you for changing lives!”</div>
     </div>
 
     <script>
