@@ -3,94 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - GSDF</title>
-    <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            text-align: center; 
-            padding: 20px; 
-            background: url('https://i.imgur.com/2kMpHO9.jpeg') no-repeat center center/cover; 
-            color: white; 
-        }
-        .container { 
-            max-width: 800px; 
-            margin: auto; 
-            padding: 30px; 
-            background: rgba(0, 0, 0, 0.7); 
-            border-radius: 15px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        }
-        h2 { font-size: 2.5em; }
-        .amount-btn { 
-            padding: 15px 30px; 
-            margin: 10px; 
-            cursor: pointer; 
-            background: #ff5733; 
-            color: white; 
-            border: none; 
-            border-radius: 10px; 
-            font-size: 1.2em; 
-            transition: 0.3s; 
-        }
-        .amount-btn:hover { background: #c70039; }
-        .donate-btn { 
-            padding: 15px 40px; 
-            margin-top: 20px; 
-            background: #2ecc71; 
-            color: white; 
-            border: none; 
-            border-radius: 10px; 
-            font-size: 1.5em; 
-            cursor: pointer; 
-            transition: 0.3s; 
-        }
-        .donate-btn:hover { background: #27ae60; }
-        .impact { margin-top: 20px; font-size: 1.2em; color: #f8f9fa; }
-        input, select { padding: 10px; font-size: 1.1em; margin: 10px; border-radius: 5px; border: none; }
-        .testimonial { margin-top: 30px; font-style: italic; font-size: 1.2em; }
-        .hero { font-size: 1.8em; font-weight: bold; margin-bottom: 20px; }
-    </style>
+    <title>Govind Social Development Foundation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="hero">Make a Difference Today!</div>
-        <h2>Support Our Cause</h2>
-        <p>Your donation helps us change lives every day.</p>
-        
-        <h3>Select Donation Amount</h3>
-        <button class="amount-btn" onclick="setAmount(500)">₹500</button>
-        <button class="amount-btn" onclick="setAmount(1000)">₹1000</button>
-        <input type="number" id="customAmount" placeholder="Enter Custom Amount">
-        
-        <h3>Choose Payment Method</h3>
-        <select id="paymentMethod">
-            <option value="upi">UPI</option>
-            <option value="bank">Bank Transfer</option>
-            <option value="paypal">PayPal</option>
-            <option value="razorpay">Razorpay</option>
-        </select>
-        
-        <h3>Donation Type</h3>
-        <label><input type="radio" name="donationType" value="one-time" checked> One-Time</label>
-        <label><input type="radio" name="donationType" value="monthly"> Monthly</label>
-        
-        <button class="donate-btn" onclick="donate()">Donate Now</button>
-        
-        <p class="impact">Your contribution provides education, food, and shelter to those in need. Thank you for your generosity!</p>
-        
-        <div class="testimonial">“Every rupee donated goes towards making a real impact. Thank you for changing lives!”</div>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="overlay"></div>
+        <h1>Welcome to Govind Social Development Foundation</h1>
+        <p>Empowering communities, changing lives.</p>
+        <a href="donate.html" class="btn">Donate Now</a>
+    </section>
+    
+    <section class="content">
+        <h2>Our Mission</h2>
+        <p>We are dedicated to improving lives through education, healthcare, and community development.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Govind Social Development Foundation. All rights reserved.</p>
+    </footer>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('https://i.imgur.com/2kMpHO9.jpeg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            padding: 50px;
+            background: white;
+        }
+        .btn {
+            background: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</body>
+</html>
 
-    <script>
-        function setAmount(amount) {
-            document.getElementById('customAmount').value = amount;
-        }
-        function donate() {
-            let amount = document.getElementById('customAmount').value;
-            let method = document.getElementById('paymentMethod').value;
-            let type = document.querySelector('input[name="donationType"]:checked').value;
-            alert(`Thank you for donating ₹${amount} via ${method} (${type} donation)!`);
-        }
-    </script>
+<!-- About Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us</title>
+</head>
+<body>
+    <h1>About Govind Social Development Foundation</h1>
+    <p>We are committed to social welfare, education, and healthcare initiatives across India.</p>
+</body>
+</html>
+
+<!-- Donate Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Donate</title>
+</head>
+<body>
+    <h1>Support Our Cause</h1>
+    <p>Your donations help us make a difference.</p>
+    <button>Donate Now</button>
+</body>
+</html>
+
+<!-- Contact Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Govind Social Development Foundation</h1>
+    <p>Email: contact@gsdfngo.in</p>
+    <p>Phone: +91-XXXXXXXXXX</p>
 </body>
 </html>
