@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="donate.css" />
 </head>
 <body>
-
     <header>
         <nav>
             <div class="logo">GSDF</div>
@@ -15,18 +14,20 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="programs.html">Programs</a></li>
-                <li><a href="donate.html" class="donate-btn active">Donate</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="donation-hero">
-        <h1>Make a Difference Today</h1>
-        <p>Your support helps us transform lives across India.</p>
+        <div class="glass">
+            <h1>Make a Difference Today</h1>
+            <p>Your support helps us transform lives across India.</p>
+        </div>
     </section>
 
-    <section class="donation-options">
+    <section class="donation-options glass">
         <h2>Choose Your Contribution</h2>
         <div class="donation-buttons">
             <button onclick="donate(50)">₹50</button>
@@ -37,17 +38,17 @@
         </div>
     </section>
 
-    <section class="payment-section">
+    <section class="payment-section glass">
         <h2>Secure Payment</h2>
         <form action="process_donation.php" method="POST">
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required />
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required />
 
-            <label for="amount">Donation Amount (INR):</label>
-            <input type="number" id="amount" name="amount" required>
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" required />
 
             <button type="submit">Donate Now</button>
         </form>
@@ -61,14 +62,12 @@
         function donate(amount) {
             document.getElementById('amount').value = amount;
         }
-
         function donateCustom() {
-            const customAmount = prompt("Enter your donation amount:");
-            if (customAmount && !isNaN(customAmount)) {
+            let customAmount = prompt("Enter your donation amount:");
+            if (customAmount) {
                 document.getElementById('amount').value = customAmount;
             }
         }
     </script>
-
 </body>
 </html>
