@@ -14,17 +14,15 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="programs.html">Programs</a></li>
-                <li><a href="donate.html" class="donate-btn">Donate</a></li>
+                <li><a href="donate.html" class="donate-btn active">Donate</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="donation-hero">
-        <div class="glass">
-            <h1>Make a Difference Today</h1>
-            <p>Your support helps us transform lives across India.</p>
-        </div>
+    <section class="donation-hero glass">
+        <h1>Make a Difference Today</h1>
+        <p>Your support helps us transform lives across India.</p>
     </section>
 
     <section class="donation-options glass">
@@ -60,12 +58,13 @@
 
     <script>
         function donate(amount) {
-            document.getElementById('amount').value = amount;
+            document.getElementById("amount").value = amount;
         }
+
         function donateCustom() {
             let customAmount = prompt("Enter your donation amount:");
             if (customAmount) {
-                document.getElementById('amount').value = customAmount;
+                document.getElementById("amount").value = customAmount;
             }
         }
     </script>
