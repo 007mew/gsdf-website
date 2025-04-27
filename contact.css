@@ -1,0 +1,273 @@
+/* ===== Base Setup ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* ===== Navbar ===== */
+  .navbar {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ff6600;
+  }
+  
+  .donate-btn {
+    background-color: darkred;
+    color: rgb(255, 255, 255);
+    padding: 12px 25px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    position: relative;
+    top: -12px; /* Moves the button 12px upwards */
+}
+
+.donate-btn:hover {
+    background-color: #00FFFF; /* Electric Blue Glow */
+    color: black !important; /* Make text visible on glow */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00FFFF, 0 0 40px #00FFFF, 0 0 60px #00FFFF; /* Strong neon glow */
+    border: 2px solid #00FFFF;
+}
+  /* ===== Hamburger Menu ===== */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+  
+  /* ===== Contact Section ===== */
+  .contact-section {
+    background: url('contact-bg.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-box {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .contact-box h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+  
+  .contact-box p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #eee;
+  }
+  
+  /* ===== Form Layout ===== */
+  .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .form-group {
+    position: relative;
+    width: 48%;
+  }
+  
+  .form-group.full-width {
+    width: 100%;
+  }
+  
+  /* ===== Inputs & Floating Labels ===== */
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group textarea {
+    resize: none;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px rgba(255, 100, 50, 0.5);
+  }
+  
+  .form-group label {
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    font-size: 14px;
+    color: #333;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0 5px;
+    border-radius: 5px;
+  }
+  
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:focus + label,
+  .form-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 12px;
+    font-size: 12px;
+    color: #000;
+  }
+  
+  /* ===== Submit Button ===== */
+  .contact-btn {
+    width: 100%;
+    padding: 14px;
+    background: #ff6b00;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background: #e55a00;
+  }
+  
+  /* ===== Confirmation Popup ===== */
+  .popup {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  .popup.show {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+    font-size: 14px;
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .form-group {
+      width: 100%;
+    }
+  
+    .donate-btn {
+      width: 100%;
+    }
+  }
+  
+  /* ===== Optional Fade-In Animation ===== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
