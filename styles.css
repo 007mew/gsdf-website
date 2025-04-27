@@ -67,7 +67,7 @@ nav {
 
 /* Hero Section */
 .about-hero {
-    background:url(csssr/4d646b04-1c67-4a5d-a610-4e70e1675339.jfif) no-repeat center center;
+    background: url('https://i.imgur.com/2kMpHO9.jpeg') no-repeat center center;
     background-size: cover;
     height: 80vh;
     display: flex;
