@@ -1,28 +1,33 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://gsdfngo.in/</loc>
-<lastmod>2025-04-02T16:52:56+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://gsdfngo.in/about</loc>
-<lastmod>2025-04-02T16:52:56+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://gsdfngo.in/programs.html</loc>
-<lastmod>2025-04-02T16:52:56+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://gsdfngo.in/donate</loc>
-<lastmod>2025-04-02T16:52:56+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://gsdfngo.in/contact</loc>
-<lastmod>2025-04-02T16:52:56+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://gsdfngo.com/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://gsdfngo.com/about.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gsdfngo.com/programs.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://gsdfngo.com/donate.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://gsdfngo.com/contact.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 </urlset>

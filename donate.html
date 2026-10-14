@@ -1,72 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Donate - GSDF</title>
-  <link rel="stylesheet" href="donate.css?v=4">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate & Support - Govind Social Development Foundation (GSDF)</title>
+  <meta name="description" content="Support GSDF with tax-exempt donations (80G). Donate via UPI (GPay, PhonePe, Paytm), QR Code, or Direct Bank Transfer to empower rural children and families in Jharkhand.">
+  <link rel="canonical" href="https://gsdfngo.com/donate.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">GSDF</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="donate.html" class="donate-btn active">Donate</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="donation-hero glass">
-        <h1>Make a Difference Today</h1>
-        <p>Your support helps us transform lives across India.</p>
-    </section>
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
 
-    <section class="donation-options glass">
-        <h2>Choose Your Contribution</h2>
-        <div class="donation-buttons">
-            <button onclick="donate(50)">₹50</button>
-            <button onclick="donate(100)">₹100</button>
-            <button onclick="donate(500)">₹500</button>
-            <button onclick="donate(5000)">₹5000</button>
-            <button onclick="donateCustom()">Other Amount</button>
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow-orb orb-primary"></div>
+  <div class="ambient-glow-orb orb-accent"></div>
+
+  <!-- Three.js 3D Background Canvas -->
+  <div id="three-canvas-container"></div>
+
+  <!-- Unified Glass Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="GSDF Official Logo" class="nav-brand-logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">GSDF</span>
+          <span class="nav-brand-subtitle">Govind Social Development</span>
         </div>
-    </section>
+      </a>
 
-    <section class="payment-section glass">
-        <h2>Secure Payment</h2>
-        <form action="process_donation.php" method="POST">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required />
+      <!-- Desktop Nav -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="lang-toggle-btn ripple-surface" aria-label="Toggle Language">
+          <span>🌐 हिंदी</span>
+        </button>
+        <a href="donate.html" class="btn btn-donate btn-sm ripple-surface active">Donate ❤︎</a>
+        
+        <button class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-            <label for="amount">Donation Amount:</label>
-            <input type="number" id="amount" name="amount" required />
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+  <nav class="mobile-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="donate.html" class="active" style="color:var(--accent-rose);">Donate ❤︎</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div>
+      <a href="donate.html" class="btn btn-donate btn-lg ripple-surface" style="width: 100%; margin-bottom: 20px;">
+        <i class="fas fa-heart"></i> <span>Donate ❤︎</span>
+      </a>
+      <p style="font-size: 0.85rem; color: var(--text-dim); text-align: center;">
+        Govind Social Development Foundation • Regd NGO
+      </p>
+    </div>
+  </nav>
 
-            <button type="submit">Donate Now</button>
+  <!-- Hero Section -->
+  <section class="section" style="padding-top: 150px; padding-bottom: 40px;">
+    <div class="container text-center">
+      <div class="section-header" data-motion="fade-up" style="margin-bottom: 20px;">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>100% Tax Deductible (80G Eligible)</span>
+        </div>
+        <h1 class="section-title gradient-text" style="font-size: clamp(2.4rem, 5vw, 4rem);">
+          Make an Instant Grassroots Contribution
+        </h1>
+        <p class="section-desc">
+          Your donation fuels books for first-generation learners, mobile medical clinics, winter blankets for elderly villagers, and women’s self-reliance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Interactive Portal -->
+  <section class="section" style="padding-top: 10px; padding-bottom: 80px;">
+    <div class="container">
+      <div class="donation-grid">
+        
+        <!-- Left: Tier Selector & Custom Input -->
+        <div class="donation-tiers-wrapper glass-panel" style="padding: 36px;" data-motion="fade-up">
+          <h2 style="color: #ffffff; font-size: 1.6rem; margin-bottom: 8px;">Select Contribution Tier</h2>
+          <p style="font-size: 0.92rem; margin-bottom: 24px; color: var(--text-muted);">
+            Choose an amount or enter a custom sum. The UPI QR code on the right updates instantly.
+          </p>
+
+          <div class="tier-buttons-row">
+            <!-- Tier 1 -->
+            <button class="tier-select-btn ripple-surface" data-amount="500">
+              <span class="tier-amount">₹500</span>
+              <span class="tier-impact-label">1 Child's School Kit & Books</span>
+            </button>
+
+            <!-- Tier 2 (Default) -->
+            <button class="tier-select-btn active ripple-surface" data-amount="1200">
+              <span class="tier-amount">₹1,200</span>
+              <span class="tier-impact-label">Full Family Health & Meds Kit</span>
+            </button>
+
+            <!-- Tier 3 -->
+            <button class="tier-select-btn ripple-surface" data-amount="2500">
+              <span class="tier-amount">₹2,500</span>
+              <span class="tier-impact-label">Women Tailoring Artisan Toolkit</span>
+            </button>
+
+            <!-- Tier 4 -->
+            <button class="tier-select-btn ripple-surface" data-amount="5000">
+              <span class="tier-amount">₹5,000</span>
+              <span class="tier-impact-label">Village Tree Plantation & Clean Water</span>
+            </button>
+          </div>
+
+          <!-- Custom Amount Box -->
+          <div style="margin-top: 20px;">
+            <label class="form-label" style="margin-bottom: 8px; display: block;">Or Enter Custom Amount (INR):</label>
+            <div class="custom-amount-box">
+              <span>₹</span>
+              <input type="number" class="custom-amount-input" value="1200" min="50" step="50" placeholder="Enter custom amount">
+            </div>
+          </div>
+
+          <!-- Bank Transfer Details Card -->
+          <div class="bank-details-accordion" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px; margin-top: 30px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+              <i class="fas fa-university" style="color: var(--primary);"></i>
+              <strong style="color: #ffffff; font-size: 1.05rem;">Direct Bank Transfer (NEFT / RTGS / IMPS)</strong>
+            </div>
+            <div class="bank-detail-row">
+              <span class="label">Beneficiary Name</span>
+              <span class="val">Govind Social Development Foundation</span>
+            </div>
+            <div class="bank-detail-row">
+              <span class="label">Account Number</span>
+              <span class="val">809244524001 (Available on Request)</span>
+            </div>
+            <div class="bank-detail-row">
+              <span class="label">Branch</span>
+              <span class="val">Madhupur, Deoghar, Jharkhand</span>
+            </div>
+            <div class="bank-detail-row">
+              <span class="label">Registered Phone / Helpline</span>
+              <span class="val">+91 8092445240</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Dynamic UPI QR Code & Direct Scan -->
+        <div class="upi-payment-card glass-panel" data-motion="fade-up" style="transition-delay: 0.1s;">
+          <div class="badge-pill" style="margin-bottom: 14px;">
+            <span class="pulse-dot"></span>
+            <span>Instant Zero-Fee UPI Payment</span>
+          </div>
+
+          <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 6px;">Scan & Pay via Any UPI App</h3>
+          <p style="font-size: 0.88rem; color: var(--text-dim); margin-bottom: 20px;">
+            Compatible with Google Pay, PhonePe, Paytm, BHIM, Cred, and all Indian banking apps.
+          </p>
+
+          <!-- Dynamic QR Frame -->
+          <div class="qr-code-frame ripple-surface">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&data=upi%3A%2F%2Fpay%3Fpa%3D8092445240%40ybl%26pn%3DGovind%2520Social%2520Development%2520Foundation%26am%3D1200%26cu%3DINR" alt="Dynamic UPI Donation QR Code">
+          </div>
+
+          <!-- Copy UPI ID Strip -->
+          <div class="upi-id-copy-box">
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-dim); display: block;">OFFICIAL UPI VPA</span>
+              <span class="upi-id-text">8092445240@ybl</span>
+            </div>
+            <button class="copy-btn copy-upi-btn ripple-surface">
+              <i class="fas fa-copy"></i> Copy UPI
+            </button>
+          </div>
+
+          <!-- Direct Payment Deep Link on Mobile -->
+          <a href="upi://pay?pa=8092445240@ybl&pn=Govind%20Social%20Development%20Foundation&am=1200&cu=INR" class="btn btn-primary btn-sm ripple-surface" style="width: 100%; max-width: 380px; margin-top: 10px;">
+            <i class="fas fa-mobile-alt"></i> Open in UPI App (Mobile Only)
+          </a>
+
+          <!-- Trust Note -->
+          <div style="margin-top: 24px; display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--text-dim); font-size: 0.85rem;">
+            <i class="fas fa-shield-alt" style="color: var(--primary);"></i>
+            <span>Encrypted & 100% Secure via NPCI / RBI UPI Gateway</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 80G Tax Exemption Receipt Request Form -->
+  <section class="section" id="tax" style="padding-top: 20px;">
+    <div class="container">
+      <div class="glass-panel" style="padding: 40px; max-width: 900px; margin: 0 auto;" data-motion="fade-up">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <div class="badge-pill">
+            <i class="fas fa-file-invoice-dollar" style="color:var(--primary);"></i>
+            <span>Tax Exemption Support</span>
+          </div>
+          <h2 class="gradient-text" style="font-size: 2rem; margin-bottom: 10px;">Request 80G Tax Donation Receipt</h2>
+          <p style="font-size: 0.95rem;">
+            Once you have transferred your contribution, submit your details below to receive your official 80G tax receipt for income tax filing.
+          </p>
+        </div>
+
+        <form class="receipt-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Full Name (as per PAN) *</label>
+              <input type="text" name="donorName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" name="donorEmail" class="form-control" placeholder="e.g. ramesh@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Phone / WhatsApp Number *</label>
+              <input type="tel" name="donorPhone" class="form-control" placeholder="e.g. +91 9876543210" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">PAN Number (for 80G Tax Credit) *</label>
+              <input type="text" name="donorPan" class="form-control" placeholder="e.g. ABCDE1234F" style="text-transform:uppercase;" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Amount Donated (INR) *</label>
+              <input type="number" name="donorAmount" class="form-control" placeholder="e.g. 1200" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">UPI UTR / Bank Reference ID *</label>
+              <input type="text" name="donorUtr" class="form-control" placeholder="e.g. 429182910291" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label">Postal Address (for physical receipt dispatch if required)</label>
+              <input type="text" name="donorAddress" class="form-control" placeholder="Flat, Street, City, State, PIN">
+            </div>
+
+            <div class="form-group full-width" style="margin-top: 10px;">
+              <button type="submit" class="btn btn-primary btn-lg ripple-surface" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> Submit Tax Receipt Request
+              </button>
+            </div>
+          </div>
         </form>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Govind Social Development Foundation. All rights reserved.</p>
-    </footer>
+  <!-- Financial Transparency & Allocation Breakdown -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-motion="fade-up">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Accountability</span>
+        </div>
+        <h2 class="section-title gradient-text">Where Does Your Contribution Go?</h2>
+        <p class="section-desc">We maintain the leanest administrative overhead so that maximum value reaches the child or mother in need.</p>
+      </div>
 
-    <script>
-        function donate(amount) {
-            document.getElementById("amount").value = amount;
-        }
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <div class="glass-card ripple-surface" data-motion="fade-up">
+          <div style="font-size: 2.4rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;">85%</div>
+          <h4 style="color:#ffffff; margin-bottom:8px;">Direct Ground Mission</h4>
+          <p style="font-size:0.9rem; color:var(--text-dim);">Books, educational materials, prescription medicines, thermal blankets, food rations, and saplings.</p>
+        </div>
 
-        function donateCustom() {
-            let customAmount = prompt("Enter your donation amount:");
-            if (customAmount) {
-                document.getElementById("amount").value = customAmount;
-            }
-        }
-    </script>
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.1s;">
+          <div style="font-size: 2.4rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 6px;">10%</div>
+          <h4 style="color:#ffffff; margin-bottom:8px;">Field Logistics & Transport</h4>
+          <p style="font-size:0.9rem; color:var(--text-dim);">Transporting medical doctors, mobile kits, and relief supplies across rough rural terrains.</p>
+        </div>
+
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.2s;">
+          <div style="font-size: 2.4rem; font-weight: 800; color: var(--accent-emerald); margin-bottom: 6px;">5%</div>
+          <h4 style="color:#ffffff; margin-bottom:8px;">Statutory Auditing & Admin</h4>
+          <p style="font-size:0.9rem; color:var(--text-dim);">Chartered accountant audits, government filings, and digital transparency infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unified Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 16px;">
+            <img src="logo.png" alt="GSDF Logo" class="nav-brand-logo">
+            <div class="nav-brand-text">
+              <span class="nav-brand-title">GSDF</span>
+              <span class="nav-brand-subtitle">Govind Social Development</span>
+            </div>
+          </a>
+          <p>
+            Govind Social Development Foundation (GSDF) is a registered NGO committed to holistic rural transformation in Jharkhand and across India.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> About Our Mission</a></li>
+            <li><a href="programs.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Ongoing Programs</a></li>
+            <li><a href="donate.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Donate & Tax Exemption</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Contact & Reach Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Our Focus</h4>
+          <ul class="footer-links-list">
+            <li><a href="programs.html#education"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Child Education</a></li>
+            <li><a href="programs.html#healthcare"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Health & Medicine Camps</a></li>
+            <li><a href="programs.html#women"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Women Empowerment</a></li>
+            <li><a href="programs.html#environment"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Clean Water & Afforestation</a></li>
+            <li><a href="programs.html#relief"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Emergency Relief Drives</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Official Contact</h4>
+          <ul class="footer-contact-info">
+            <li class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Village: Sirsa via Madhupur, District: Deoghar, PIN: 815353, Jharkhand, India</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 8092445240, +91 9835370181</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>gsdfngo@gmail.com, jaymantk@gsdfngo.in</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; <span class="current-year">2026</span> Govind Social Development Foundation. All rights reserved. Registered NGO in Jharkhand, India.
+        </p>
+        <div class="footer-legal-links">
+          <a href="about.html#legal">Legal Status</a>
+          <a href="donate.html#tax">80G Tax Exemption</a>
+          <a href="contact.html">Privacy & Ethics</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Action Dock -->
+  <div class="floating-dock">
+    <button class="dock-btn dock-btn-top ripple-surface" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <a href="tel:+918092445240" class="dock-btn dock-btn-phone ripple-surface" aria-label="Call GSDF Helpline"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/918092445240" target="_blank" rel="noopener" class="dock-btn dock-btn-whatsapp ripple-surface" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

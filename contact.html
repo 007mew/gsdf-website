@@ -1,117 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - GSDF</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Govind Social Development Foundation (GSDF)</title>
+  <meta name="description" content="Contact Govind Social Development Foundation (GSDF) in Deoghar, Jharkhand. Reach out for volunteer opportunities, CSR partnerships, donations, or general inquiries.">
+  <link rel="canonical" href="https://gsdfngo.com/contact.html">
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="contact.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
-
 <body>
-  <header>
-    <nav class="navbar">
-        <div class="logo">GSDF</div>
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow-orb orb-primary"></div>
+  <div class="ambient-glow-orb orb-accent"></div>
+
+  <!-- Three.js 3D Background Canvas -->
+  <div id="three-canvas-container"></div>
+
+  <!-- Unified Glass Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="GSDF Official Logo" class="nav-brand-logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">GSDF</span>
+          <span class="nav-brand-subtitle">Govind Social Development</span>
         </div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="donate.html" class="donate-btn">Donate</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      
-      
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="lang-toggle-btn ripple-surface" aria-label="Toggle Language">
+          <span>🌐 हिंदी</span>
+        </button>
+        <a href="donate.html" class="btn btn-donate btn-sm ripple-surface">Donate ❤︎</a>
+        
+        <button class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main class="contact-section" style="background-image: url('contact-bg.jpg');">
-    <div class="contact-box" data-aos="fade-up">
-      <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>Reach out to us anytime through the form or the contact details below.</p>
-        <ul>
-          <li><strong>📞 Phone:</strong> +91 8092445240, +91 9835370181</li>
-          <li><strong>📧 Email:</strong> gsdfngo@gmail.com, jaymantk@gsdfngo.in</li>
-          <li><strong>📍 Address:</strong> Village: Sirsa via Madhupur, District: Deoghar, 815353, Jharkhand, India</li>
-        </ul>
-      </div>
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+  <nav class="mobile-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="donate.html" style="color:var(--accent-rose);">Donate ❤︎</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div>
+      <a href="donate.html" class="btn btn-donate btn-lg ripple-surface" style="width: 100%; margin-bottom: 20px;">
+        <i class="fas fa-heart"></i> <span>Donate ❤︎</span>
+      </a>
+      <p style="font-size: 0.85rem; color: var(--text-dim); text-align: center;">
+        Govind Social Development Foundation • Regd NGO
+      </p>
+    </div>
+  </nav>
 
-      <section class="contact-section">
-        <div class="contact-box" data-aos="zoom-in">
-          <h2>Contact Us</h2>
-          <p>We'd love to hear from you. Fill out the form and we’ll get back to you soon!</p>
-      
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" name="firstName" required>
-              <label>First Name</label>
+  <!-- Contact Hero -->
+  <section class="section" style="padding-top: 150px; padding-bottom: 40px;">
+    <div class="container text-center">
+      <div class="section-header" data-motion="fade-up" style="margin-bottom: 20px;">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>We'd Love to Hear From You</span>
+        </div>
+        <h1 class="section-title gradient-text" style="font-size: clamp(2.4rem, 5vw, 4rem);">
+          Connect With Our Ground Team
+        </h1>
+        <p class="section-desc">
+          Whether you want to volunteer in Deoghar, collaborate on a CSR initiative, request a donation receipt, or visit our field projects, our team is at your service.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Two-Column Hub -->
+  <section class="section" style="padding-top: 10px; padding-bottom: 80px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start;">
+        
+        <!-- Left: Official Channels & Details -->
+        <div style="display: flex; flex-direction: column; gap: 24px;" data-motion="fade-up">
+          <div class="glass-panel" style="padding: 36px;">
+            <h2 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 20px;">Official Communication Desk</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <!-- Address -->
+              <div style="display: flex; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(0,229,188,0.15); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                  <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div>
+                  <strong style="color: #ffffff; display: block; margin-bottom: 4px;">Registered Head Office</strong>
+                  <p style="font-size: 0.92rem; margin: 0; color: #cbd5e1;">
+                    Village: Sirsa via Madhupur, District: Deoghar, PIN: 815353, Jharkhand, India.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Phone Numbers -->
+              <div style="display: flex; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56,189,248,0.15); color: var(--accent-cyan); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <strong style="color: #ffffff; display: block; margin-bottom: 4px;">Direct Helpline & Inquiries</strong>
+                  <p style="font-size: 0.92rem; margin: 0;">
+                    <a href="tel:+918092445240" style="color: var(--primary-light); font-weight: 600;">+91 8092445240</a>, 
+                    <a href="tel:+919835370181" style="color: var(--primary-light); font-weight: 600;">+91 9835370181</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div style="display: flex; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(16,185,129,0.15); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div>
+                  <strong style="color: #ffffff; display: block; margin-bottom: 4px;">Official Email Desks</strong>
+                  <p style="font-size: 0.92rem; margin: 0;">
+                    <a href="mailto:gsdfngo@gmail.com" style="color: var(--primary-light);">gsdfngo@gmail.com</a><br>
+                    <a href="mailto:jaymantk@gsdfngo.in" style="color: var(--primary-light);">jaymantk@gsdfngo.in</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- WhatsApp Direct -->
+              <div style="display: flex; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(37,211,102,0.15); color: #25d366; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <strong style="color: #ffffff; display: block; margin-bottom: 4px;">Instant WhatsApp Helpdesk</strong>
+                  <p style="font-size: 0.92rem; margin: 0; color: #cbd5e1;">
+                    Available for real-time donor receipts, volunteer joining, and emergency relief alerts.
+                  </p>
+                  <a href="https://wa.me/918092445240" target="_blank" rel="noopener" class="btn btn-glass btn-sm ripple-surface" style="margin-top: 10px; color:#25d366; border-color:rgba(37,211,102,0.3);">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp Now
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <input type="text" name="lastName" required>
-              <label>Last Name</label>
+          </div>
+
+          <!-- Interactive Google Maps Frame for Deoghar Region -->
+          <div class="glass-panel" style="padding: 16px; overflow: hidden;">
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 240px;">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116345.56847846556!2d86.58284581297058!3d24.256247967912423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f1388b5ecf00bb%3A0xeeb9ea3305c6d3fe!2sMadhupur%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: grayscale(80%) invert(90%) contrast(85%);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
-            <div class="form-group full-width">
-              <input type="email" name="email" required>
-              <label>Email</label>
+          </div>
+        </div>
+
+        <!-- Right: Modern Glassmorphic Form -->
+        <div class="glass-panel" style="padding: 40px;" data-motion="fade-up" style="transition-delay: 0.1s;">
+          <h2 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 8px;">Send a Direct Message</h2>
+          <p style="font-size: 0.95rem; margin-bottom: 24px; color: var(--text-muted);">
+            Fill in the details below. We typically respond within 24 hours.
+          </p>
+
+          <form class="contact-form-main">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" name="firstName" class="form-control" placeholder="Ramesh" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" name="lastName" class="form-control" placeholder="Kumar" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" name="email" class="form-control" placeholder="ramesh@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Phone Number (Optional)</label>
+                <input type="tel" name="phone" class="form-control" placeholder="+91 9876543210">
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label">Purpose of Inquiry *</label>
+                <select name="subject" class="form-control" style="background: rgba(16,26,26,0.95);">
+                  <option value="General Inquiry">General Inquiry / Information</option>
+                  <option value="Volunteer Joining">I Want to Volunteer with GSDF</option>
+                  <option value="CSR Collaboration">Corporate CSR / Institutional Partnership</option>
+                  <option value="Donation & Receipt">Donation Inquiry / 80G Tax Receipt</option>
+                  <option value="Field Visit">Field Project Visit in Deoghar</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label">Your Message *</label>
+                <textarea name="message" class="form-control" rows="5" placeholder="Share your thoughts, proposal, or inquiry here..." required></textarea>
+              </div>
+
+              <div class="form-group full-width" style="margin-top: 10px;">
+                <button type="submit" class="btn btn-primary btn-lg ripple-surface" style="width: 100%;">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </div>
             </div>
-            <div class="form-group full-width">
-              <input type="text" name="phone">
-              <label>Phone (optional)</label>
-            </div>
-            <div class="form-group full-width">
-              <textarea name="message" rows="5" required></textarea>
-              <label>Message</label>
-            </div>
-            <button type="submit" class="contact-btn">Send Message</button>
           </form>
         </div>
-      </section>
-    </div>
-    <div class="popup" id="popup">Message Sent Successfully!</div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Govind Social Development Foundation. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="section-header" data-motion="fade-up">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Common Queries</span>
+        </div>
+        <h2 class="section-title gradient-text">Frequently Asked Questions</h2>
+        <p class="section-desc">Quick answers regarding donations, field visits, and volunteering.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1000px; margin: 0 auto;">
+        <div class="glass-card ripple-surface" data-motion="fade-up">
+          <h4 style="color:#ffffff; margin-bottom:8px;">How can I volunteer with GSDF?</h4>
+          <p style="font-size:0.92rem; color:var(--text-dim);">
+            You can volunteer in field medical camps, teach rural children, help with digital media, or assist in winter relief drives. Send us a message or WhatsApp us directly to join our volunteer roster.
+          </p>
+        </div>
+
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.1s;">
+          <h4 style="color:#ffffff; margin-bottom:8px;">Can I donate in-kind (books, clothes, medical supplies)?</h4>
+          <p style="font-size:0.92rem; color:var(--text-dim);">
+            Yes! We accept new or gently used children's books, school bags, warm blankets, and sealed medical equipment at our registered Madhupur office.
+          </p>
+        </div>
+
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.2s;">
+          <h4 style="color:#ffffff; margin-bottom:8px;">Are donations eligible for 80G tax exemptions?</h4>
+          <p style="font-size:0.92rem; color:var(--text-dim);">
+            Yes, donations to Govind Social Development Foundation are eligible under Section 80G of the Indian Income Tax Act. Request your receipt on our Donate page.
+          </p>
+        </div>
+
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.3s;">
+          <h4 style="color:#ffffff; margin-bottom:8px;">Can I visit the villages and see the impact?</h4>
+          <p style="font-size:0.92rem; color:var(--text-dim);">
+            Absolutely! We encourage transparency. Inform our team at least one week in advance, and our field coordinators will facilitate a visit to our learning centers and rural projects in Deoghar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unified Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 16px;">
+            <img src="logo.png" alt="GSDF Logo" class="nav-brand-logo">
+            <div class="nav-brand-text">
+              <span class="nav-brand-title">GSDF</span>
+              <span class="nav-brand-subtitle">Govind Social Development</span>
+            </div>
+          </a>
+          <p>
+            Govind Social Development Foundation (GSDF) is a registered NGO committed to holistic rural transformation in Jharkhand and across India.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> About Our Mission</a></li>
+            <li><a href="programs.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Ongoing Programs</a></li>
+            <li><a href="donate.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Donate & Tax Exemption</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Contact & Reach Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Our Focus</h4>
+          <ul class="footer-links-list">
+            <li><a href="programs.html#education"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Child Education</a></li>
+            <li><a href="programs.html#healthcare"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Health & Medicine Camps</a></li>
+            <li><a href="programs.html#women"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Women Empowerment</a></li>
+            <li><a href="programs.html#environment"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Clean Water & Afforestation</a></li>
+            <li><a href="programs.html#relief"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Emergency Relief Drives</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Official Contact</h4>
+          <ul class="footer-contact-info">
+            <li class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Village: Sirsa via Madhupur, District: Deoghar, PIN: 815353, Jharkhand, India</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 8092445240, +91 9835370181</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>gsdfngo@gmail.com, jaymantk@gsdfngo.in</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; <span class="current-year">2026</span> Govind Social Development Foundation. All rights reserved. Registered NGO in Jharkhand, India.
+        </p>
+        <div class="footer-legal-links">
+          <a href="about.html#legal">Legal Status</a>
+          <a href="donate.html#tax">80G Tax Exemption</a>
+          <a href="contact.html">Privacy & Ethics</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
+  <!-- Floating Quick Action Dock -->
+  <div class="floating-dock">
+    <button class="dock-btn dock-btn-top ripple-surface" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <a href="tel:+918092445240" class="dock-btn dock-btn-phone ripple-surface" aria-label="Call GSDF Helpline"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/918092445240" target="_blank" rel="noopener" class="dock-btn dock-btn-whatsapp ripple-surface" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
 
-    const form = document.querySelector('.contact-form');
-    const popup = document.getElementById('popup');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      popup.classList.add('show');
-      setTimeout(() => popup.classList.remove('show'), 3000);
-      form.reset();
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-  
 </html>

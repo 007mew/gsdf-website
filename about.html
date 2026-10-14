@@ -1,112 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - GSDF</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Govind Social Development Foundation (GSDF)</title>
+  <meta name="description" content="Learn about Govind Social Development Foundation (GSDF), our founding journey in Deoghar, Jharkhand, our core values, leadership, and vision for rural India.">
+  <link rel="canonical" href="https://gsdfngo.com/about.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">GSDF</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="donate.html" class="donate-btn">Donate</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="about-hero">
-        <h1>About Govind Social Development Foundation</h1>
-        <p>Working towards a brighter future for communities across India.</p>
-    </section>
-    
-    <section class="mission">
-        <h2>Our Mission</h2>
-        <p>Govind Social Development Foundation is committed to empowering marginalized communities through education, healthcare, and sustainable development. Our initiatives focus on improving lives, creating opportunities, and building a better tomorrow.</p>
-    </section>
-    
-    <section class="objectives">
-        <h2>Our Objectives</h2>
-        <ul>
-            <li>To provide education and vocational training for underprivileged children and youth.</li>
-            <li>To promote healthcare, sanitation, and medical aid in rural areas.</li>
-            <li>To support women's empowerment through self-help groups and training.</li>
-            <li>To implement environmental initiatives such as afforestation and water conservation.</li>
-            <li>To work towards community development with a focus on sustainability.</li>
-        </ul>
-    </section>
-    
-    <section class="history">
-        <h2>Our Story</h2>
-        <p>Founded with a vision to transform society, GSDF has been tirelessly working towards holistic development. Over the years, we have impacted thousands of lives by implementing projects in education, healthcare, and social welfare.</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Govind Social Development Foundation. All rights reserved.</p>
-    </footer>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background: linear-gradient(90deg, #007b5e, #004d40);
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .about-hero {
-            background: url('https://i.imgur.com/B18HTJB.png') no-repeat center center/cover;
-            background-size: cover;
-            width: 100%;
-            height: 50vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
-        .mission, .objectives, .history {
-            padding: 40px;
-        }
-        .objectives ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .objectives ul li {
-            background: #eef7f1;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-    </style>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow-orb orb-primary"></div>
+  <div class="ambient-glow-orb orb-accent"></div>
+
+  <!-- Three.js 3D Interactive Background Canvas -->
+  <div id="three-canvas-container"></div>
+
+  <!-- Unified Glass Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="GSDF Official Logo" class="nav-brand-logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">GSDF</span>
+          <span class="nav-brand-subtitle">Govind Social Development</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="lang-toggle-btn ripple-surface" aria-label="Toggle Language">
+          <span>🌐 हिंदी</span>
+        </button>
+        <a href="donate.html" class="btn btn-donate btn-sm ripple-surface">Donate ❤︎</a>
+        
+        <button class="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+  <nav class="mobile-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="donate.html" style="color:var(--accent-rose);">Donate ❤︎</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div>
+      <a href="donate.html" class="btn btn-donate btn-lg ripple-surface" style="width: 100%; margin-bottom: 20px;">
+        <i class="fas fa-heart"></i> <span>Donate ❤︎</span>
+      </a>
+      <p style="font-size: 0.85rem; color: var(--text-dim); text-align: center;">
+        Govind Social Development Foundation • Regd NGO
+      </p>
+    </div>
+  </nav>
+
+  <!-- Subpage Hero Banner -->
+  <section class="section" style="padding-top: 150px; padding-bottom: 60px;">
+    <div class="container text-center">
+      <div class="section-header" data-motion="fade-up" style="margin-bottom: 20px;">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Our Roots & Philosophy</span>
+        </div>
+        <h1 class="section-title gradient-text" style="font-size: clamp(2.4rem, 5vw, 4rem);">
+          Bridging Hope & Opportunity in Grassroots India
+        </h1>
+        <p class="section-desc">
+          Born in the rural heart of Jharkhand, Govind Social Development Foundation exists to ensure no child is deprived of education, no family lacks basic healthcare, and every woman has the tools for self-reliance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Founding Story -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="glass-panel" style="padding: 50px 40px;" data-motion="fade-up">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div>
+            <div class="badge-pill">
+              <i class="fas fa-history" style="color:var(--primary);"></i>
+              <span>Our Genesis</span>
+            </div>
+            <h2 class="gradient-text" style="font-size: 2.2rem; margin-bottom: 20px;">From a Local Spark to a Regional Movement</h2>
+            <p style="margin-bottom: 16px;">
+              Govind Social Development Foundation was established with headquarters in Sirsa via Madhupur, in the Deoghar district of Jharkhand. Witnessing the severe hardships faced by tribal and marginalized farming communities—where children dropped out of school to support family subsistence and basic medical attention was hours away—our founders united to build an organized, sustainable vehicle for long-term change.
+            </p>
+            <p style="margin-bottom: 24px;">
+              What started as an informal collective providing emergency winter blankets, dry ration packets, and free tutoring classes under banyan trees has grown into an officially registered non-profit organization touching over 300 villages.
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <div style="background: rgba(0,229,188,0.1); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 12px 20px;">
+                <strong style="color:#ffffff; font-size:1.4rem; display:block;">300+</strong>
+                <span style="color:var(--text-dim); font-size:0.85rem;">Villages Reached</span>
+              </div>
+              <div style="background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); border-radius: var(--radius-md); padding: 12px 20px;">
+                <strong style="color:#ffffff; font-size:1.4rem; display:block;">15,000+</strong>
+                <span style="color:var(--text-dim); font-size:0.85rem;">Direct Lives Touched</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.6); border: 1px solid var(--border-subtle);">
+            <img src="assets/images/20250101_141149.jpg" alt="GSDF grassroots action in Jharkhand" style="width: 100%; height: auto; display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision, Mission & Values -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-motion="fade-up">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Guiding Principles</span>
+        </div>
+        <h2 class="section-title gradient-text">Vision, Mission & Core Values</h2>
+        <p class="section-desc">The immutable ethical framework that guides every decision, camp, and program we undertake.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Vision -->
+        <div class="glass-card" data-motion="fade-up">
+          <div class="pillar-icon-box"><i class="fas fa-eye"></i></div>
+          <h3 class="pillar-title" style="color: var(--primary);">Our Vision</h3>
+          <p class="pillar-desc">
+            A self-reliant, educated, and equitable India where rural citizens have dignified access to premier learning, preventive healthcare, livelihood security, and a healthy natural ecosystem.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="glass-card" data-motion="fade-up" style="transition-delay: 0.1s;">
+          <div class="pillar-icon-box"><i class="fas fa-bullseye"></i></div>
+          <h3 class="pillar-title" style="color: var(--accent-cyan);">Our Mission</h3>
+          <p class="pillar-desc">
+            To empower marginalized and tribal families across Jharkhand through community-driven educational interventions, maternal and child healthcare, vocational training for rural women, and afforestation drives.
+          </p>
+        </div>
+
+        <!-- Values -->
+        <div class="glass-card" data-motion="fade-up" style="transition-delay: 0.2s;">
+          <div class="pillar-icon-box"><i class="fas fa-gem"></i></div>
+          <h3 class="pillar-title" style="color: var(--accent-emerald);">Our Core Values</h3>
+          <p class="pillar-desc">
+            <strong>Uncompromising Transparency:</strong> Every contribution is tracked.<br>
+            <strong>Grassroots Dignity:</strong> We work shoulder-to-shoulder with villagers.<br>
+            <strong>Zero Discrimination:</strong> Unconditional service to every human in need.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey & Milestones Roadmap -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-motion="fade-up">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Growth & Milestones</span>
+        </div>
+        <h2 class="section-title gradient-text">Our Road to Impact</h2>
+        <p class="section-desc">A decade of persistent groundwork, building trust village by village.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+        <div class="glass-card ripple-surface" data-motion="fade-up">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">2021</div>
+          <h4 style="color: #ffffff; margin-bottom: 8px;">Official Foundation & Registration</h4>
+          <p style="font-size: 0.92rem; color: var(--text-dim);">
+            Formalized Govind Social Development Foundation as a registered body to expand organized relief, legal compliance, and community outreach.
+          </p>
+        </div>
+
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.1s;">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 8px;">2022</div>
+          <h4 style="color: #ffffff; margin-bottom: 8px;">Rural Health Camps Launch</h4>
+          <p style="font-size: 0.92rem; color: var(--text-dim);">
+            Mobilized volunteer doctors and health workers to conduct free mobile medical and eye testing camps across Deoghar's tribal belt.
+          </p>
+        </div>
+
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.2s;">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-emerald); margin-bottom: 8px;">2023 - 2024</div>
+          <h4 style="color: #ffffff; margin-bottom: 8px;">Shiksha Setu & Women SHGs</h4>
+          <p style="font-size: 0.92rem; color: var(--text-dim);">
+            Distributed study kits, bags, and books to over 5,000 children and initiated vocational tailoring self-help groups for village women.
+          </p>
+        </div>
+
+        <div class="glass-card ripple-surface" data-motion="fade-up" style="transition-delay: 0.3s;">
+          <div style="font-size: 2rem; font-weight: 800; color: var(--accent-rose); margin-bottom: 8px;">2025 - 2026</div>
+          <h4 style="color: #ffffff; margin-bottom: 8px;">Regional Expansion & Modern Vision</h4>
+          <p style="font-size: 0.92rem; color: var(--text-dim);">
+            Scaling to 300+ villages, integrating digital learning kiosks, clean water borewells, and massive annual winter warmth drives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal & Official Certification Showcase -->
+  <section class="section" id="legal" style="padding-top: 20px;">
+    <div class="container">
+      <div class="trust-banner glass-panel" data-motion="fade-up">
+        <div class="trust-grid">
+          <div>
+            <div class="badge-pill">
+              <span class="pulse-dot"></span>
+              <span>Official Verification</span>
+            </div>
+            <h3 class="section-title gradient-text" style="font-size: 2.2rem; margin-bottom: 14px;">Government Registration & Compliance</h3>
+            <p style="margin-bottom: 24px;">
+              GSDF operates as an officially certified Non-Governmental Organization. We maintain regular filings, audited annual accounts, and full statutory compliance under Indian law.
+            </p>
+
+            <div class="trust-badges-list">
+              <div class="trust-badge-item">
+                <i class="fas fa-file-contract"></i>
+                <span>Registered Society in Jharkhand</span>
+              </div>
+              <div class="trust-badge-item">
+                <i class="fas fa-university"></i>
+                <span>NITI Aayog Darpan Registered</span>
+              </div>
+              <div class="trust-badge-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>80G Eligible Donations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview & Action -->
+          <div class="cert-card-preview ripple-surface">
+            <div class="cert-icon-wrapper">
+              <i class="fas fa-award"></i>
+            </div>
+            <h4 style="color: #ffffff; margin-bottom: 8px;">Registration Certificate</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 18px;">
+              View our authentic Certificate of Registration (PDF) issued by the competent authority.
+            </p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+              <button class="btn btn-primary btn-sm open-cert-modal ripple-surface">
+                <i class="fas fa-eye"></i> View Certificate
+              </button>
+              <a href="certificate.pdf" download="GSDF_Certificate.pdf" class="btn btn-glass btn-sm ripple-surface">
+                <i class="fas fa-download"></i> Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unified Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 16px;">
+            <img src="logo.png" alt="GSDF Logo" class="nav-brand-logo">
+            <div class="nav-brand-text">
+              <span class="nav-brand-title">GSDF</span>
+              <span class="nav-brand-subtitle">Govind Social Development</span>
+            </div>
+          </a>
+          <p>
+            Govind Social Development Foundation (GSDF) is a registered NGO committed to holistic rural transformation in Jharkhand and across India.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> About Our Mission</a></li>
+            <li><a href="programs.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Ongoing Programs</a></li>
+            <li><a href="donate.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Donate & Tax Exemption</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Contact & Reach Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Our Focus</h4>
+          <ul class="footer-links-list">
+            <li><a href="programs.html#education"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Child Education</a></li>
+            <li><a href="programs.html#healthcare"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Health & Medicine Camps</a></li>
+            <li><a href="programs.html#women"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Women Empowerment</a></li>
+            <li><a href="programs.html#environment"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Clean Water & Afforestation</a></li>
+            <li><a href="programs.html#relief"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Emergency Relief Drives</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Official Contact</h4>
+          <ul class="footer-contact-info">
+            <li class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Village: Sirsa via Madhupur, District: Deoghar, PIN: 815353, Jharkhand, India</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 8092445240, +91 9835370181</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>gsdfngo@gmail.com, jaymantk@gsdfngo.in</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; <span class="current-year">2026</span> Govind Social Development Foundation. All rights reserved. Registered NGO in Jharkhand, India.
+        </p>
+        <div class="footer-legal-links">
+          <a href="about.html#legal">Legal Status</a>
+          <a href="donate.html#tax">80G Tax Exemption</a>
+          <a href="contact.html">Privacy & Ethics</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Official Certificate Modal -->
+  <div class="modal-overlay cert-modal">
+    <div class="modal-content" style="max-width: 800px; padding: 30px;">
+      <button class="modal-close-btn" aria-label="Close Certificate"><i class="fas fa-times"></i></button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 6px;">Govind Social Development Foundation</h3>
+        <p style="color: var(--primary); font-size: 0.9rem;">Official Certificate of Registration • Government of Jharkhand</p>
+      </div>
+      <div style="border-radius: var(--radius-md); overflow: hidden; background: #1a2222; height: 500px; border: 1px solid var(--border-subtle);">
+        <iframe src="certificate.pdf#toolbar=0" style="width: 100%; height: 100%; border: none;"></iframe>
+      </div>
+      <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <span style="color: var(--text-dim); font-size: 0.85rem;">Official PDF Record • Verified Registration</span>
+        <a href="certificate.pdf" download="GSDF_Registration_Certificate.pdf" class="btn btn-primary btn-sm ripple-surface">
+          <i class="fas fa-download"></i> Download Official Certificate
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Quick Action Dock -->
+  <div class="floating-dock">
+    <button class="dock-btn dock-btn-top ripple-surface" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <a href="tel:+918092445240" class="dock-btn dock-btn-phone ripple-surface" aria-label="Call GSDF Helpline"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/918092445240" target="_blank" rel="noopener" class="dock-btn dock-btn-whatsapp ripple-surface" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
